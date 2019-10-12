@@ -3,6 +3,8 @@ import Axios from "axios";
 import { setState } from "expect/build/jestMatchersObject";
 import CharacterCard from './CharacterCard';
 
+import './CharacterList.css';
+
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState(null);
