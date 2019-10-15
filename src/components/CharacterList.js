@@ -18,9 +18,13 @@ export default function CharacterList() {
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
     async function getCharacters() {
-      const characters = await Axios.get(`https://rickandmortyapi.com/api/character/?page=${searchPage}`);
-      setCharacters(characters.data.results);
-      setTotalPages(characters.data.info.pages);
+      try{
+        const characters = await Axios.get(`https://rickandmortyapi.com/api/character/?page=${searchPage}`);
+        setCharacters(characters.data.results);
+        setTotalPages(characters.data.info.pages);
+      } catch(e) {
+        console.log(`The following error has occured: ${e}!`);
+      }
     }
     getCharacters();
   }, [searchPage]);
