@@ -3,6 +3,7 @@ import Axios from "axios";
 import SearchForm from './SearchForm';
 import CharacterCard from './CharacterCard';
 
+import Spinner from 'react-bootstrap/Spinner';
 import Button from 'react-bootstrap/Button';
 import './CharacterList.css';
 
@@ -25,7 +26,7 @@ export default function CharacterList() {
   }, [searchPage]);
 
   if(!characters) {
-    return <p>Loading characters. Please wait...</p>
+    return <p>Loading characters. Please wait...<Spinner animation="border" variant="primary" /></p>
   }
 
   const handleNextPage = (event) => {
