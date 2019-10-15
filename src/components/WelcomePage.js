@@ -1,4 +1,8 @@
 import React from "react";
+import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+
+import './WelcomePage.css';
 
 export default function WelcomePage() {
   return (
@@ -10,6 +14,9 @@ export default function WelcomePage() {
           src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
           alt="rick"
         />
+        <div>
+        <Link to='/characters'><Button>Click here to check out our Characters!</Button></Link>
+        </div>
       </header>
     </section>
   );
