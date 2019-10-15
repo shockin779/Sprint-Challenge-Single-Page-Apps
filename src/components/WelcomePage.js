@@ -15,7 +15,7 @@ export default function WelcomePage() {
           alt="rick"
         />
         <div>
-          <Link to='/characters'><Button>Click here to check out our Characters!</Button></Link>
+        <Link to='/characters'><Button>Click here to check out our Characters!</Button></Link>
         </div>
       </header>
     </section>
