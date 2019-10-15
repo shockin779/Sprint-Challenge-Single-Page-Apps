@@ -5,7 +5,7 @@ export default function SearchForm(props) {
  
   return (
     <section className="search-form">
-      <Form>
+      <Form onSubmit={e => {e.preventDefault();}}>
         <Form.Control type='text' placeholder='Search for character' onChange={props.handleChange} />
       </Form>
     </section>
